@@ -1,9 +1,9 @@
 <?php
 
-//冒泡排序（改进）
+//冒泡排序（改进）思路分析：法如其名，就是像冒泡一样，每次从数组当中 冒一个最大的数出来。 
 function bubble_sort($array){
 	$sort_total_num = 0;
-	
+	//该层循环控制 需要冒泡的轮数
 	for($i = 1; $i < count($array); $i ++){
 
 		$flag = false;
