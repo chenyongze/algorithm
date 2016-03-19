@@ -1,10 +1,11 @@
 <?php
-//插入排序：
+//插入排序思路：将要排序的元素插入到已经 假定排序号的数组的指定位置。 
 function insert_sort($array){
-	for($i = 1; $i < count($array); $i ++){
+	for($i = 1; $i < count($array); $i ++){//从第二个元素开始排序，从小到大排序
 		$insertVal = $array[$i];
 		$insertIndex = $i - 1;
 		while($insertIndex >= 0 && $insertVal < $array[$insertIndex]){
+			//依次和前面已经排好序的元素进行比较，比这个元素小就把元素后移，一旦比元素大就完成排序，放好该元素的位置了
 			$array[$insertIndex + 1] = $array[$insertIndex];
 			$insertIndex --;
 		}
